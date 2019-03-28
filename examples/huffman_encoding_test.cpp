@@ -49,7 +49,7 @@ int main() {
     fclose(output_file);
 
     printf ("\n***************Comparing against output data*************** \n\n");
-    if (system("diff huffman.random256.out huffman.random256.golden")) {
+    if (system("diff -w huffman.random256.out huffman.random256.golden")) {
         fprintf(stdout, "*******************************************\n");
         fprintf(stdout, "FAIL: Output DOES NOT match the golden output\n");
         fprintf(stdout, "*******************************************\n");
